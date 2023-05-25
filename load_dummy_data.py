@@ -1,4 +1,5 @@
 import sqlite3
+import datetime
 import csv
 
 # Connection to db, will either connect to existing or create new
@@ -7,13 +8,11 @@ conn = sqlite3.connect('housing.db')
 # Create cursor
 curs = conn.cursor()
 
-# INSERT one record
-# curs.execute("INSERT INTO tb_resident_info VALUES ('John', 'Doe', 'john@doe.com', '123-456-7890', '01-01-1999')")
-
 # THIS HAS BEEN EXECUTED
 with open('../MOCK_DATA/MOCK_RESIDENT_DATA.csv', newline='') as residents_file:
     reader = csv.reader(residents_file, delimiter=',')
     for row in reader:
+        row[4] =  datetime.datetime.strptime(row[4], '%m/%d/%Y').date()
         curs.execute("INSERT INTO tb_resident_info (first_name,last_name,email,phone,birthdate) VALUES (?,?,?,?,?)", row)
 
 # residents = [('John', 'Doe', 'john@doe.com', '1234567890', '01-01-1999'), 

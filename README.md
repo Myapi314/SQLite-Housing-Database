@@ -27,7 +27,7 @@
 <!-- {Make a list of websites that you found helpful in this project} -->
 
 - [Codemy - SQLite Databases with Python Tutorial](https://www.youtube.com/watch?v=byHcYRpMgI4)
-- [Web Site Name](http://url.link.goes.here)
+- [SQLite Tutorial](https://www.sqlitetutorial.net/)
 
 # Future Work
 

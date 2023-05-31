@@ -28,6 +28,7 @@
 
 - [Codemy - SQLite Databases with Python Tutorial](https://www.youtube.com/watch?v=byHcYRpMgI4)
 - [SQLite Tutorial](https://www.sqlitetutorial.net/)
+- [SQL - W3 Schools](https://www.w3schools.com/sql/)
 
 # Future Work
 

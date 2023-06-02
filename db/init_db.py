@@ -1,11 +1,21 @@
 import sqlite3
 
-def connect_to_db():
-    # Connection to db, will either connect to existing or create new
-    conn = sqlite3.connect('housing.db')
-    return conn
+class HousingDatabase():
+    def __init__(self):
+        pass
+        self.conn: sqlite3.Connection = None
+        self.curs: sqlite3.Cursor = None
 
-conn = connect_to_db()
+    def connect_to_db(self):
+
+        # Connection to db, will either connect to existing or create new
+        self.conn = sqlite3.connect('db/housing.db')
+        self.conn.row_factory = sqlite3.Row
+        self.curs = self.conn.cursor()
+        return self.conn
+
+db = HousingDatabase()
+conn = db.connect_to_db()
 
 # Create cursor
 curs = conn.cursor()

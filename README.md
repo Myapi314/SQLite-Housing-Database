@@ -9,12 +9,12 @@ This software was built as a demo database for housing software. The goal with t
 
 <!-- {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of how created the Relational Database.} -->
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/wWYcYWwYlhw)
 
 # Relational Database
 
 <!-- {Describe the relational database you are using.} -->
-This is a SQL Relational Database, which means that the database consists of several tables that are related by the different columns they have. For example, in this database software there currently exists 4 tables: tb_resident_info, tb_housing_complexes, tb_student_housing_units, and tb_leases. All tables store data related to a fictitious 
+This is a SQL Relational Database, which means that the database consists of several tables that are related by the different columns they have. For example, in this database software there currently exists 4 tables: tb_resident_info, tb_housing_complexes, tb_student_housing_units, and tb_leases. All tables store data related to a fictitious student housing company. 
 
 <!-- {Describe the structure (tables) of the relational database that you created.} -->
 

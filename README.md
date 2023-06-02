@@ -35,6 +35,8 @@ To develop the software specifically related to direct interaction with the data
 - [Python sqlite3 Docs](https://docs.python.org/3.8/library/sqlite3.html)
 - [Full-stack Web App with Python](https://levelup.gitconnected.com/full-stack-web-app-with-python-react-and-bootstrap-backend-8592baa6e4eb)
 - [Mockaroo](https://www.mockaroo.com/)
+- [CustomTkinter Documentation](https://customtkinter.tomschimansky.com/documentation/)
+- [What to do to import files from different folder in Python?](https://pythonhow.com/what/what-to-do-to-import-files-from-different-folder-in-python/)
 
 # Future Work
 

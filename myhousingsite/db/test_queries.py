@@ -26,11 +26,11 @@ conn.commit()
 
 lease_id = curs.lastrowid
 curs.execute("SELECT * FROM tb_leases WHERE rowid = ?", (lease_id,))
-print(curs.fetchone())
+# print(curs.fetchone())
 
 curs.execute("DELETE FROM tb_leases WHERE rowid = ?", (lease_id, ))
 conn.commit()
-print('********************\n')
+# print('********************\n')
 
 # ********* QUERY AND FETCH *************
 
@@ -49,21 +49,21 @@ curs.execute("SELECT * FROM tb_resident_info")
 residents = curs.fetchmany(10)
 
 # Print the names
-for resident in residents:
-    print(resident[1])
+# for resident in residents:
+#     print(resident[1])
 
 curs.execute("SELECT * FROM tb_resident_info WHERE last_name LIKE 'Do%'")
 results = curs.fetchall()
-print(results)
+# print(results)
 
 curs.execute("SELECT * FROM tb_resident_info WHERE datetime(birthdate) >= datetime('1995-01-01')")
 results = curs.fetchall()
-for result in results:
-    print(result)
+# for result in results:
+#     print(result)
 
 curs.execute("SELECT COUNT(*) FROM tb_resident_info WHERE datetime(birthdate) < datetime('1995-01-01')")
 results = curs.fetchone()
-print(results)
+# print(results)
 
 # ******* UPDATE ************
 # Use primary key, use unique rowid
@@ -73,7 +73,7 @@ curs.execute(""" UPDATE tb_resident_info SET phone = '777-888-9999'
 """)
 conn.commit()
 curs.execute("SELECT * FROM tb_resident_info WHERE rowid = 101")
-print(curs.fetchone())
+# print(curs.fetchone())
 
 # ******** DELETE ************
 curs.execute("DELETE FROM tb_resident_info WHERE rowid = 101")
@@ -82,13 +82,20 @@ curs.execute("DELETE FROM tb_resident_info WHERE rowid = 101")
 conn.commit()
 
 curs.execute("SELECT * FROM tb_resident_info WHERE first_name = 'Pepita'")
-print(curs.fetchall())
+# print(curs.fetchall())
 
 curs.execute("SELECT * FROM tb_resident_info WHERE rowid > 99")
-print(curs.fetchall())
+# print(curs.fetchall())
 
 curs.execute("SELECT * FROM tb_leases")
 # print(curs.fetchall())
+
+curs.execute('''SELECT tbu.*, tbl.resident_id
+            FROM tb_student_housing_units tbu
+            LEFT JOIN tb_leases tbl ON
+            tbu.rowid = tbl.unit_id
+            ''')
+print(curs.fetchall())
 
 # Close connection
 conn.close()

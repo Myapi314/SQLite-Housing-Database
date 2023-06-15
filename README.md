@@ -47,6 +47,10 @@ To develop the software specifically related to direct interaction with the data
 - [Multiple Databases for Django](https://www.protechtraining.com/blog/post/tutorial-using-djangos-multiple-database-support-477)
 - [Database Routers Django Projects](https://docs.djangoproject.com/en/dev/topics/db/multi-db/#automatic-database-routing)
 - [Digital Ocean Backend with Django](https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react)
+- [Django Projects Docs](https://docs.djangoproject.com/)
+- [Modelviewset Django Rest Framework](https://ilovedjango.com/django/rest-api-framework/views/tips/sub/modelviewset-django-rest-framework/)
+- [Django Rest Framework](https://www.django-rest-framework.org/api-guide/)
+- [Query Params with Django](https://pythoncircle.com/post/710/getting-query-params-from-request-in-django/)
 
 # Future Work
 

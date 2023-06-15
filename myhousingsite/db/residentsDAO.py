@@ -1,5 +1,5 @@
 import datetime
-from init_db import HousingDatabase
+from init_db import DB_NAME, HousingDatabase
 
 class ResidentsDAO(HousingDatabase):
     
@@ -119,7 +119,7 @@ class ResidentsDAO(HousingDatabase):
         return updated_res
 
 def main():
-    DAO = ResidentsDAO()
+    DAO = ResidentsDAO(DB_NAME)
     print(DAO.get_resident_by_id(10))
     print(DAO.get_resident_by_id(11))
     print(DAO.insert_resident({'first_name': 'John', 

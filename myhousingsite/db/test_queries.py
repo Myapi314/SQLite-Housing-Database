@@ -1,7 +1,9 @@
 from datetime import datetime as dt
 import sqlite3
+
+from init_db import DB_NAME
 # Connection to db, will either connect to existing or create new
-conn = sqlite3.connect('housing.db')
+conn = sqlite3.connect(DB_NAME)
 
 # Create cursor
 curs = conn.cursor()

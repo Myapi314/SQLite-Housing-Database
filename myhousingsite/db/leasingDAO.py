@@ -1,5 +1,5 @@
 from datetime import datetime as dt
-from init_db import HousingDatabase
+from init_db import DB_NAME, HousingDatabase
 
 
 class LeasingDAO(HousingDatabase):
@@ -219,7 +219,7 @@ class LeasingDAO(HousingDatabase):
         return capacity
     
 def main():
-    leasing = LeasingDAO()
+    leasing = LeasingDAO(DB_NAME)
     # leases = leasing.get_leases()
     # print(leasing.get_lease_by_id(1))
     # print(leasing.add_lease({'resident_id': 94,

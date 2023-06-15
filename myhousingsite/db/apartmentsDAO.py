@@ -1,4 +1,4 @@
-from init_db import HousingDatabase
+from init_db import DB_NAME, HousingDatabase
 
 class ApartmentsDAO(HousingDatabase):
     def get_complex_by_id(self, id):
@@ -40,7 +40,7 @@ class ApartmentsDAO(HousingDatabase):
         return unit
 
 def main():
-    dao = ApartmentsDAO()
+    dao = ApartmentsDAO(DB_NAME)
     print(dao.get_complex_by_id(1))
     print(dao.get_unit_by_id(1))
 

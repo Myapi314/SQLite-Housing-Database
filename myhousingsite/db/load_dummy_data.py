@@ -2,13 +2,15 @@ import sqlite3
 import datetime
 import csv
 
+from init_db import DB_NAME
+
 # Connection to db, will either connect to existing or create new
-conn = sqlite3.connect('housing.db')
+conn = sqlite3.connect(DB_NAME)
 
 # Create cursor
 curs = conn.cursor()
 
-with open('../MOCK_DATA/MOCK_RESIDENT_DATA.csv', newline='') as residents_file:
+with open('./MOCK_DATA/MOCK_RESIDENT_DATA.csv', newline='') as residents_file:
     reader = csv.reader(residents_file, delimiter=',')
     for row in reader:
         row[4] =  datetime.datetime.strptime(row[4], '%m/%d/%Y').date()
@@ -24,7 +26,7 @@ curs.executemany("INSERT OR IGNORE INTO tb_housing_complexes VALUES (?,?,?)", co
 
 conn.commit()
 
-with open('../MOCK_DATA/MOCK_UNITS_DATA.csv', newline='') as units_file:
+with open('./MOCK_DATA/MOCK_UNITS_DATA.csv', newline='') as units_file:
     reader = csv.reader(units_file, delimiter=',')
     for row in reader:
         row[0] = int(row[0])

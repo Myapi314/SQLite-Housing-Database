@@ -1,20 +1,18 @@
-from fastapi import FastAPI
-import datetime
 import tkinter as tk
 import customtkinter as ctk
 import sys
 import os
 
-path = os.path.abspath("db")
+path = os.path.abspath("myhousingsite/db")
 sys.path.append(path)
 from residentsDAO import ResidentsDAO
 from leasingDAO import LeasingDAO
 from apartmentsDAO import ApartmentsDAO
 
 # declaring classes to be used for queries to database
-res_query = ResidentsDAO()
-lease_query = LeasingDAO()
-apt_query = ApartmentsDAO()
+res_query = ResidentsDAO('myhousingsite/db/housing.db.sqlite3')
+lease_query = LeasingDAO('myhousingsite/db/housing.db.sqlite3')
+apt_query = ApartmentsDAO('myhousingsite/db/housing.db.sqlite3')
 
 def main():
 

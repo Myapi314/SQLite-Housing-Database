@@ -6,6 +6,9 @@ This software was built as a demo database for housing software. The goal with t
 
 <!-- {Provide a description of the software that you wrote and how it integrates with a SQL Relational Database. Describe how to use your program.} -->
 
+Activate environment venv\Scripts\activate
+Run Server python manage.py runserver
+
 <!-- {Describe your purpose for writing this software.} -->
 
 <!-- {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of how created the Relational Database.} -->

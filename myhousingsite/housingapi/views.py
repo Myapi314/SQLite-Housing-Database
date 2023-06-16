@@ -38,7 +38,11 @@ class UnitsByComplexView(APIView):
         lease_end = self.request.GET.get('lease_end', None)
         apartmentsDAO = ApartmentsDAO('db/housing.db.sqlite3')
         response = apartmentsDAO.get_units_with_leases(complex_id, lease_start, lease_end)
+
+        # response can be serialized from python dictionary to be rendered in rest framework
         return Response(response)
+    
+
     # serializer_class = UnitSerializer
     # http_method_names = ['get', ]
     
@@ -56,9 +60,3 @@ class TestApiView(APIView):
         apartmentsDAO = ApartmentsDAO('db/housing.db.sqlite3')
         response = apartmentsDAO.get_units_with_leases(complex_id, lease_start, lease_end)
         return Response(response)
-
-# class TestApiView(APIView):
-    
-#     def get(self, request):
-#         apartmentsDAO = ApartmentsDAO('db/housing.db.sqlite3')
-#         return Response(apartmentsDAO.get_units_with_leases())
